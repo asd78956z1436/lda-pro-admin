@@ -72,6 +72,40 @@ const adminList = [
     ]
   },
   {
+    path: '/home',
+    component: '#',
+    name: 'Home',
+    meta: {},
+    children: [
+      {
+        path: 'index',
+        component: 'views/Home/Home',
+        name: 'HomeDemo',
+        meta: {
+          title: 'router.home',
+          icon: 'material-symbols:home'
+        }
+      }
+    ]
+  },
+  {
+    path: '/about',
+    component: '#',
+    name: 'About',
+    meta: {},
+    children: [
+      {
+        path: 'index',
+        component: 'views/About/About',
+        name: 'AboutDemo',
+        meta: {
+          title: 'router.about',
+          icon: 'arcticons:about-you'
+        }
+      }
+    ]
+  },
+  {
     path: '/components',
     component: '#',
     redirect: '/components/form/default-form',

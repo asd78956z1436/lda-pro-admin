@@ -35,7 +35,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     plugins: [
       Vue({
         script: {
-          // 开启defineModel
+          // 開啟defineModel
           defineModel: true
         }
       }),
@@ -61,7 +61,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         : undefined,
       EslintPlugin({
         cache: false,
-        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 检查的文件
+        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 檢查的文件
       }),
       VueI18nPlugin({
         runtimeOnly: true,
@@ -140,7 +140,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     server: {
       port: 4000,
       proxy: {
-        // 选项写法
+        // 選項寫法
         '/api': {
           target: 'http://127.0.0.1:8000',
           changeOrigin: true,

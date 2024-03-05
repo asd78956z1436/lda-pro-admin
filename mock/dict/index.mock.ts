@@ -32,7 +32,7 @@ export default [
       }
     }
   },
-  // 获取某个字典
+  // 獲取某個字典
   {
     url: '/mock/dict/one',
     method: 'get',

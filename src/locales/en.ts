@@ -49,7 +49,7 @@ export default {
     notSpace: 'Spaces are not allowed',
     notSpecialCharacters: 'Special characters are not allowed',
     isEqual: 'The two are not equal',
-    // 列设置
+    // 列設置
     setting: 'Setting'
   },
   lock: {
@@ -95,7 +95,7 @@ export default {
     footer: 'Footer',
     uniqueOpened: 'Unique opened',
     tagsViewIcon: 'Tags view icon',
-    // 开启动态路由
+    // 開啟動態路由
     dynamicRouter: 'Enable dynamic router',
     serverDynamicRouter: 'Server dynamic router',
     reExperienced: 'Please exit the login experience again',
@@ -173,7 +173,7 @@ export default {
     PicturePreview: 'Table Image Preview',
     department: 'Department management',
     menuManagement: 'Menu management',
-    // 权限测试页面
+    // 權限測試頁面
     permission: 'Permission test page',
     function: 'Function',
     multipleTabs: 'Multiple tabs',
@@ -183,7 +183,7 @@ export default {
     waterfall: 'Waterfall',
     imageCropping: 'Image cropping',
     videoPlayer: 'Video player',
-    // 表格视频预览
+    // 表格視頻預覽
     tableVideoPreview: 'Table video preview',
     cardTable: 'Card table',
     personalCenter: 'Personal center',
@@ -316,11 +316,11 @@ export default {
     subitem: 'Subitem',
     formValidation: 'Form validation',
     verifyReset: 'Verify reset',
-    // 富文本编辑器
+    // 富文本編輯器
     richText: 'Rich text',
     jsonEditor: 'JSON Editor',
     form: 'Form',
-    // 远程加载
+    // 遠程加載
     remoteLoading: 'Remote loading',
     // 聚焦
     focus: 'Focus',
@@ -329,12 +329,12 @@ export default {
     selectAnyLevel: 'Select Any Level',
     multiple: 'Multiple',
     filterable: 'Filterable',
-    // 自定义节点内容
+    // 自定義節點內容
     customContent: 'Custom content',
-    // 懒加载
+    // 懶加載
     lazyLoad: 'Lazy load',
     upload: 'Upload',
-    // 用户头像
+    // 用戶頭像
     userAvatar: 'User avatar',
     iconPicker: 'Icon picker',
     iAgree: 'I agree'
@@ -422,9 +422,9 @@ export default {
     center: 'center',
     right: 'right',
     dynamicOptions: 'Dynamic options',
-    // 删除单选框
+    // 刪除單選框
     deleteRadio: 'Delete radio',
-    // 还原单选框
+    // 還原單選框
     restoreRadio: 'Restore radio',
     loading: 'Loading',
     reset: 'Reset'
@@ -524,14 +524,14 @@ export default {
     remark: 'Remark',
     remarkMessage1: 'Back end control routing permission',
     remarkMessage2: 'Front end control routing permission',
-    // 部门列表
+    // 部門列表
     departmentList: 'Department list',
-    // 搜索部门
+    // 搜索部門
     searchDepartment: 'Search department',
     account: 'Account',
     email: 'Email',
     createTime: 'Create time',
-    // 所属部门
+    // 所屬部門
     department: 'Department',
     departmentName: 'Department name',
     status: 'Status',
@@ -542,7 +542,7 @@ export default {
   menu: {
     menuName: 'Menu name',
     icon: 'Icon',
-    // 权限
+    // 權限
     permission: 'Permission',
     component: 'Component',
     path: 'Path',
@@ -560,7 +560,7 @@ export default {
   role: {
     roleName: 'Role name',
     role: 'Role',
-    // 菜单分配
+    // 菜單分配
     menu: 'Menu allocation'
   },
   inputPasswordDemo: {

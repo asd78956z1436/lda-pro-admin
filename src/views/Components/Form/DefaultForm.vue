@@ -442,7 +442,7 @@ const treeSelectData = [
   }
 ]
 
-// 模拟远程加载
+// 模擬遠程加載
 const getTreeSelectData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -1492,7 +1492,7 @@ const schema = reactive<FormSchema[]>([
     componentProps: {
       options: []
     },
-    // 远程加载option
+    // 遠程加載option
     optionApi: async () => {
       const res = await getDictOneApi()
       return res.data
@@ -1505,7 +1505,7 @@ const schema = reactive<FormSchema[]>([
     componentProps: {
       options: []
     },
-    // 远程加载option
+    // 遠程加載option
     optionApi: async () => {
       const res = await getDictOneApi()
       return res.data
@@ -1518,7 +1518,7 @@ const schema = reactive<FormSchema[]>([
     componentProps: {
       options: []
     },
-    // 远程加载option
+    // 遠程加載option
     optionApi: async () => {
       const res = await getDictOneApi()
       return res.data
@@ -1531,7 +1531,7 @@ const schema = reactive<FormSchema[]>([
     componentProps: {
       options: []
     },
-    // 远程加载option
+    // 遠程加載option
     optionApi: async () => {
       const res = await getDictOneApi()
       return res.data
@@ -1541,7 +1541,7 @@ const schema = reactive<FormSchema[]>([
     field: 'field82',
     label: `${t('formDemo.treeSelect')}`,
     component: 'TreeSelect',
-    // 远程加载option
+    // 遠程加載option
     optionApi: async () => {
       const res = await getTreeSelectData()
       return res
@@ -1796,10 +1796,10 @@ const schema = reactive<FormSchema[]>([
     component: 'IAgree',
     label: t('formDemo.default'),
     componentProps: {
-      text: '我同意《用户协议》',
+      text: '我同意《用戶協議》',
       link: [
         {
-          text: '《用户协议》',
+          text: '《用戶協議》',
           url: 'https://element-plus.org/'
         }
       ]
