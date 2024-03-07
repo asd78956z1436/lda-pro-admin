@@ -1,12 +1,37 @@
 <script setup lang="ts">
 import { onBeforeUnmount, computed, PropType, unref, nextTick, ref, watch, shallowRef } from 'vue'
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
-import { IDomEditor, IEditorConfig, i18nChangeLanguage } from '@wangeditor/editor'
+import {
+  IDomEditor,
+  IEditorConfig,
+  i18nChangeLanguage,
+  i18nAddResources,
+  t
+} from '@wangeditor/editor'
 import { propTypes } from '@/utils/propTypes'
 import { isNumber } from '@/utils/is'
 import { ElMessage } from 'element-plus'
 import { useLocaleStore } from '@/store/modules/locale'
 
+const zhTW = {
+  vcomponent: {
+    initialize: '你必須使用由 “useWangEditor” 函數創建的 ${component} Option！',
+    instance: '無法獲取 ${component} 實例！'
+  },
+  // 標題
+  header: {
+    title: '標題',
+    text: '正文'
+  },
+  fontSize: {
+    title: '字號',
+    default: '默認'
+  }
+}
+
+// 添加新語言
+i18nAddResources('zh-TW', zhTW)
+console.log(t)
 const localeStore = useLocaleStore()
 
 const currentLocale = computed(() => localeStore.getCurrentLocale)
@@ -25,7 +50,7 @@ const props = defineProps({
 
 const emit = defineEmits(['change', 'update:modelValue'])
 
-// 编辑器实例，必须用 shallowRef
+// 編輯器實例，必須用 shallowRef
 const editorRef = shallowRef<IDomEditor>()
 
 const valueHtml = ref('')
@@ -41,7 +66,7 @@ watch(
   }
 )
 
-// 监听
+// 監聽
 watch(
   () => valueHtml.value,
   (val: string) => {
@@ -53,7 +78,7 @@ const handleCreated = (editor: IDomEditor) => {
   editorRef.value = editor
 }
 
-// 编辑器配置
+// 編輯器配置
 const editorConfig = computed((): IEditorConfig => {
   return Object.assign(
     {
@@ -91,16 +116,16 @@ const editorStyle = computed(() => {
   }
 })
 
-// 回调函数
+// 回調函數
 const handleChange = (editor: IDomEditor) => {
   emit('change', editor)
 }
 
-// 组件销毁时，及时销毁编辑器
+// 組件銷毀時，及時銷毀編輯器
 onBeforeUnmount(() => {
   const editor = unref(editorRef.value)
 
-  // 销毁，并移除 editor
+  // 銷毀，並移除 editor
   editor?.destroy()
 })
 
@@ -116,13 +141,13 @@ defineExpose({
 
 <template>
   <div class="border-1 border-solid border-[var(--el-border-color)] z-10">
-    <!-- 工具栏 -->
+    <!-- 工具欄 -->
     <Toolbar
       :editor="editorRef"
       :editorId="editorId"
       class="border-0 b-b-1 border-solid border-[var(--el-border-color)]"
     />
-    <!-- 编辑器 -->
+    <!-- 編輯器 -->
     <Editor
       v-model="valueHtml"
       :editorId="editorId"

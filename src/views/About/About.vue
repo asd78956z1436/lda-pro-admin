@@ -31,8 +31,23 @@ const imageUrl = ref('')
 const schema = reactive<FormSchema[]>([
   {
     field: 'field1',
+    label: 'Item1',
+    component: 'Input',
+    componentProps: {}
+  },
+  {
+    field: 'field3',
+    label: `Det1`,
+    component: 'Editor',
+    componentProps: {},
+    colProps: {
+      span: 24
+    }
+  },
+  {
+    field: 'field2',
     component: 'Upload',
-    label: `LOGO`,
+    label: `AboutP1`,
     componentProps: {
       action: 'https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15',
       showFileList: false,
@@ -65,60 +80,6 @@ const schema = reactive<FormSchema[]>([
     colProps: {
       span: 24
     }
-  },
-  {
-    field: 'field2',
-    label: 'Item1',
-    component: 'Input',
-    componentProps: {}
-  },
-  {
-    field: 'field3',
-    label: `Item2`,
-    component: 'Input',
-    componentProps: {}
-  },
-  {
-    field: 'field4',
-    label: `Item3`,
-    component: 'Input',
-    componentProps: {}
-  },
-  {
-    field: 'field5',
-    label: `Item4`,
-    component: 'Input',
-    componentProps: {}
-  },
-  {
-    field: 'field6',
-    component: 'IconPicker',
-    label: 'IconA',
-    value: 'tdesign:archway'
-  },
-  {
-    field: 'field7',
-    component: 'IconPicker',
-    label: 'IconB',
-    value: 'tdesign:archway'
-  },
-  {
-    field: 'field8',
-    component: 'IconPicker',
-    label: 'IconC',
-    value: 'tdesign:archway'
-  },
-  {
-    field: 'field9',
-    component: 'IconPicker',
-    label: 'IconD',
-    value: 'tdesign:archway'
-  },
-  {
-    field: 'field10',
-    component: 'IconPicker',
-    label: 'IconE',
-    value: 'tdesign:archway'
   }
 ])
 </script>
